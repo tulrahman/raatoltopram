@@ -13,7 +13,7 @@ else:
         f.write(r)
 from sms import SendSms
 
-TOKEN = "MTA4NzgwNDAyNDE2MzY3MjE3OQ.Gbf5T5.6zanC_yQcc2KtenzHkyEyGoqlFZ4-NzhsAaDpk"
+TOKEN = ""
 gif = ""
 adet = 1000
 saniye = 0
@@ -24,7 +24,7 @@ client = discord.Client(intents=intents)
 @client.event
 async def on_ready():
     print('{} Çalışmaya Başladı!'.format(client.user))
-    activity = discord.Activity(type=discord.ActivityType.playing, name="komutlar icin !yardim - Aveor")
+    activity = discord.Activity(type=discord.ActivityType.playing, name="erolsiiiiiii")
     await client.change_presence(activity=activity)
     
 @client.event
@@ -50,9 +50,9 @@ async def on_message(message):
                             sleep(saniye)
             await message.channel.send(telno+" --> "+str(sms.adet)+f" adet SMS gönderildi. {message.author.mention}")                        
         else:
-            await message.channel.send(f"Geçerli komut yazınız!\nYardım için ' !yardim ' yazınız. {message.author.mention}")
+            await message.channel.send(f"Geçerli komut yazınız!\nYardım için ' !yardim ' yazınız lan. {message.author.mention}")
     elif "!yardim" == message.content:
-        await message.channel.send(f"Sms göndermek için komutu aşağıdaki gibi yazınız.\n```!sms 505483****(başına +90 koymayın.)``` {message.author.mention}")
+        await message.channel.send(f"Sms göndermek için erol komutu aşağıdaki gibi yazınız.\n```!sms 543****(başına +90 koymayın.)``` {message.author.mention}")
     else:
         pass
   
